@@ -1,0 +1,7 @@
+COPY . /var/www/
+RUN ls /var/www
+
+RUN composer install --working-dir=/var/www
+
+RUN chmod -R 777 /var/www/storage
+RUN chmod -R 777 /var/www/bootstrap/cache/
